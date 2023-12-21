@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sessions Page</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var sessions = JSON.parse(localStorage.getItem('sessions')) || [];
+
+            var sessionsContainer = document.getElementById('sessionsContainer');
+
+            sessions.forEach(function(session, index) {
+                var sessionDiv = document.createElement('div');
+                sessionDiv.innerHTML = 'Session ' + (index + 1) + ': ' + session.date;
+                sessionsContainer.appendChild(sessionDiv);
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Sessions Page</h1>
+    <div id="sessionsContainer"></div>
+</body>
+
+</html>

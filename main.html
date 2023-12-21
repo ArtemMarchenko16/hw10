@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onload="saveSessionInfo()">
+    <form id="userForm">
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <input type="text" id="surnameInput" placeholder="Enter your surname">
+        <input type="text" id="ageInput" placeholder="Enter your age">
+        <input type="button" value="Show User" id="btn">
+    </form>
+
+    <div id="result"></div>
+
+    <div id="number">0</div>
+
+    <div id="container" class="container"></div>
+    <button onclick="changePage(-1)">Попередня</button>
+    <button onclick="changePage(1)">Наступна</button>
+
+    <br>
+    <br>
+    <input id="hider" type="button" value="hide">
+    <h2 id="text">hello okten!</h2>
+
+    <br>
+    <br>
+
+
+    <input type="text" id="idForAge" placeholder="Enter you age">
+    <input onclick="onButtonClick()" id="btnForCheck" type="button" value="Check">
+
+    <script src="app.js"></script>
+</body>
+
+</html>
